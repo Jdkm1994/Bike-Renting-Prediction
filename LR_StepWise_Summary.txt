@@ -1,0 +1,45 @@
+
+Call:
+lm(formula = cnt ~ season.1 + season.2 + season.3 + yr.0 + mnth.3 + 
+    mnth.4 + mnth.5 + mnth.6 + mnth.8 + mnth.9 + mnth.10 + weekday.0 + 
+    weekday.1 + weekday.2 + weekday.3 + weekday.4 + weekday.5 + 
+    workingday.0 + weathersit.1 + weathersit.2 + temp + hum + 
+    windspeed, data = dummy_df_train)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3817.5  -317.2   111.7   446.2  2253.6 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   4235.95     450.67   9.399  < 2e-16 ***
+season.1     -1441.96     117.15 -12.309  < 2e-16 ***
+season.2      -584.11     194.98  -2.996 0.002859 ** 
+season.3      -659.39     160.76  -4.102 4.71e-05 ***
+yr.0         -2027.42      65.24 -31.076  < 2e-16 ***
+mnth.3         427.59     141.40   3.024 0.002609 ** 
+mnth.4         386.03     209.01   1.847 0.065280 .  
+mnth.5         632.82     216.79   2.919 0.003653 ** 
+mnth.6         438.18     181.06   2.420 0.015833 *  
+mnth.8         396.86     150.55   2.636 0.008619 ** 
+mnth.9         903.17     141.18   6.397 3.34e-10 ***
+mnth.10        553.24     143.76   3.848 0.000133 ***
+weekday.0     -303.68     119.69  -2.537 0.011446 *  
+weekday.1     -921.68     200.88  -4.588 5.52e-06 ***
+weekday.2     -833.39     223.84  -3.723 0.000217 ***
+weekday.3     -701.38     223.45  -3.139 0.001785 ** 
+weekday.4     -760.31     221.18  -3.437 0.000631 ***
+weekday.5     -716.16     221.30  -3.236 0.001283 ** 
+workingday.0  -727.17     191.00  -3.807 0.000156 ***
+weathersit.1  2030.51     241.36   8.413 3.34e-16 ***
+weathersit.2  1546.29     224.08   6.901 1.41e-11 ***
+temp          4520.54     364.87  12.389  < 2e-16 ***
+hum          -1701.96     341.77  -4.980 8.49e-07 ***
+windspeed    -2920.12     497.19  -5.873 7.33e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 776.3 on 560 degrees of freedom
+Multiple R-squared:  0.8431,	Adjusted R-squared:  0.8366 
+F-statistic: 130.8 on 23 and 560 DF,  p-value: < 2.2e-16
+

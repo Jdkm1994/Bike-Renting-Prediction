@@ -1,0 +1,165 @@
+Call:
+rpart(formula = cnt ~ ., data = train, method = "anova")
+  n= 584 
+
+          CP nsplit rel error    xerror       xstd
+1 0.39125135      0 1.0000000 1.0013121 0.04504011
+2 0.20804112      1 0.6087486 0.6224608 0.03164775
+3 0.07994187      2 0.4007075 0.4070790 0.02984685
+4 0.03914290      3 0.3207657 0.3457117 0.02859912
+5 0.03538343      4 0.2816228 0.3217094 0.02750777
+6 0.02648223      5 0.2462393 0.2973390 0.02766030
+7 0.01170670      6 0.2197571 0.2681025 0.02356794
+8 0.01103159      7 0.2080504 0.2598851 0.02265436
+9 0.01000000      8 0.1970188 0.2502565 0.02313651
+
+Variable importance
+      temp       mnth         yr     season        hum  windspeed weathersit 
+        29         24         19         18          5          3          1 
+
+Node number 1: 584 observations,    complexity param=0.3912514
+  mean=4431.06, MSE=3681942 
+  left son=2 (239 obs) right son=3 (345 obs)
+  Primary splits:
+      temp      < 0.432373  to the left,  improve=0.39125140, (0 missing)
+      season    splits as  LRRR, improve=0.32870980, (0 missing)
+      yr        splits as  LR, improve=0.31629780, (0 missing)
+      mnth      splits as  LLLRRRRRRRRL, improve=0.30684550, (0 missing)
+      windspeed < 0.184198  to the right, improve=0.06613297, (0 missing)
+  Surrogate splits:
+      mnth      splits as  LLLRRRRRRRLL, agree=0.894, adj=0.741, (0 split)
+      season    splits as  LRRL, agree=0.824, adj=0.569, (0 split)
+      windspeed < 0.286806  to the right, agree=0.606, adj=0.038, (0 split)
+      hum       < 0.538125  to the left,  agree=0.603, adj=0.029, (0 split)
+
+Node number 2: 239 observations,    complexity param=0.07994187
+  mean=2989.021, MSE=2135552 
+  left son=4 (130 obs) right son=5 (109 obs)
+  Primary splits:
+      yr     splits as  LR, improve=0.33678760, (0 missing)
+      season splits as  LL-R, improve=0.29281770, (0 missing)
+      temp   < 0.275725  to the left,  improve=0.21431450, (0 missing)
+      mnth   splits as  LLLL-----RRR, improve=0.17542420, (0 missing)
+      hum    < 0.824394  to the right, improve=0.03511527, (0 missing)
+  Surrogate splits:
+      mnth      splits as  LLLL-----LRL, agree=0.569, adj=0.055, (0 split)
+      hum       < 0.535625  to the right, agree=0.569, adj=0.055, (0 split)
+      temp      < 0.3383335 to the left,  agree=0.565, adj=0.046, (0 split)
+      windspeed < 0.32217   to the left,  agree=0.565, adj=0.046, (0 split)
+      weekday   splits as  LLRLLLL, agree=0.548, adj=0.009, (0 split)
+
+Node number 3: 345 observations,    complexity param=0.2080411
+  mean=5430.038, MSE=2314689 
+  left son=6 (170 obs) right son=7 (175 obs)
+  Primary splits:
+      yr         splits as  LR, improve=0.56017970, (0 missing)
+      hum        < 0.8485415 to the right, improve=0.14542940, (0 missing)
+      weathersit splits as  RLL, improve=0.09959908, (0 missing)
+      windspeed  < 0.19155   to the right, improve=0.05462702, (0 missing)
+      mnth       splits as  -LRRRRRRRRLR, improve=0.04123040, (0 missing)
+  Surrogate splits:
+      hum       < 0.620625  to the right, agree=0.571, adj=0.129, (0 split)
+      mnth      splits as  -RRRRLRLLRLR, agree=0.557, adj=0.100, (0 split)
+      temp      < 0.625     to the right, agree=0.554, adj=0.094, (0 split)
+      windspeed < 0.197142  to the right, agree=0.545, adj=0.076, (0 split)
+      season    splits as  RRLL, agree=0.542, adj=0.071, (0 split)
+
+Node number 4: 130 observations,    complexity param=0.0391429
+  mean=2212.462, MSE=1005706 
+  left son=8 (91 obs) right son=9 (39 obs)
+  Primary splits:
+      season     splits as  LL-R, improve=0.64376650, (0 missing)
+      mnth       splits as  LLLL-----RRR, improve=0.50275880, (0 missing)
+      temp       < 0.235833  to the left,  improve=0.23324650, (0 missing)
+      windspeed  < 0.10745   to the right, improve=0.20416870, (0 missing)
+      weathersit splits as  RLL, improve=0.07084114, (0 missing)
+  Surrogate splits:
+      mnth      splits as  LLLL-----RRR, agree=0.938, adj=0.795, (0 split)
+      windspeed < 0.10745   to the right, agree=0.792, adj=0.308, (0 split)
+      temp      < 0.4158335 to the left,  agree=0.708, adj=0.026, (0 split)
+
+Node number 5: 109 observations,    complexity param=0.03538343
+  mean=3915.193, MSE=1906052 
+  left son=10 (33 obs) right son=11 (76 obs)
+  Primary splits:
+      temp      < 0.2804165 to the left,  improve=0.36620850, (0 missing)
+      season    splits as  LR-R, improve=0.32836950, (0 missing)
+      mnth      splits as  LLRR-----RRL, improve=0.17790120, (0 missing)
+      hum       < 0.712835  to the right, improve=0.10586230, (0 missing)
+      windspeed < 0.3168865 to the right, improve=0.06351728, (0 missing)
+  Surrogate splits:
+      mnth      splits as  LRRR-----RRR, agree=0.752, adj=0.182, (0 split)
+      windspeed < 0.3496315 to the right, agree=0.734, adj=0.121, (0 split)
+      hum       < 0.4654165 to the left,  agree=0.725, adj=0.091, (0 split)
+      weekday   splits as  RLRRRRR, agree=0.716, adj=0.061, (0 split)
+
+Node number 6: 170 observations,    complexity param=0.01103159
+  mean=4274.712, MSE=708326.5 
+  left son=12 (60 obs) right son=13 (110 obs)
+  Primary splits:
+      weathersit splits as  RLL, improve=0.19699070, (0 missing)
+      hum        < 0.9041665 to the right, improve=0.19351580, (0 missing)
+      mnth       splits as  -LLLRRRRRRLL, improve=0.17578320, (0 missing)
+      temp       < 0.4708335 to the left,  improve=0.12384350, (0 missing)
+      windspeed  < 0.185329  to the right, improve=0.07180632, (0 missing)
+  Surrogate splits:
+      hum       < 0.715     to the right, agree=0.812, adj=0.467, (0 split)
+      mnth      splits as  -RRRRRRRLRLL, agree=0.700, adj=0.150, (0 split)
+      season    splits as  RRRL, agree=0.676, adj=0.083, (0 split)
+      windspeed < 0.313752  to the right, agree=0.659, adj=0.033, (0 split)
+
+Node number 7: 175 observations,    complexity param=0.02648223
+  mean=6552.354, MSE=1318919 
+  left son=14 (14 obs) right son=15 (161 obs)
+  Primary splits:
+      hum        < 0.810625  to the right, improve=0.24671090, (0 missing)
+      weathersit splits as  RLL, improve=0.16541280, (0 missing)
+      windspeed  < 0.1852394 to the right, improve=0.10064110, (0 missing)
+      mnth       splits as  -LLLLRRRRRLL, improve=0.09215541, (0 missing)
+      temp       < 0.5041665 to the left,  improve=0.08877730, (0 missing)
+  Surrogate splits:
+      weathersit splits as  RRL, agree=0.937, adj=0.214, (0 split)
+      windspeed  < 0.35261   to the right, agree=0.926, adj=0.071, (0 split)
+
+Node number 8: 91 observations
+  mean=1685.703, MSE=323966.7 
+
+Node number 9: 39 observations
+  mean=3441.564, MSE=438298.3 
+
+Node number 10: 33 observations
+  mean=2647.303, MSE=773121.2 
+
+Node number 11: 76 observations
+  mean=4465.724, MSE=1396886 
+
+Node number 12: 60 observations
+  mean=3768.933, MSE=788083.6 
+
+Node number 13: 110 observations
+  mean=4550.591, MSE=449179.6 
+
+Node number 14: 14 observations
+  mean=4617.929, MSE=2162913 
+
+Node number 15: 161 observations,    complexity param=0.0117067
+  mean=6720.565, MSE=891841.3 
+  left son=30 (59 obs) right son=31 (102 obs)
+  Primary splits:
+      mnth       splits as  -LLLLRRRRRLL, improve=0.17531170, (0 missing)
+      season     splits as  LLRR, improve=0.11214250, (0 missing)
+      hum        < 0.7414585 to the right, improve=0.09381484, (0 missing)
+      temp       < 0.5029165 to the left,  improve=0.07793862, (0 missing)
+      weathersit splits as  RL-, improve=0.06840321, (0 missing)
+  Surrogate splits:
+      season    splits as  LLRR, agree=0.876, adj=0.661, (0 split)
+      temp      < 0.51      to the left,  agree=0.752, adj=0.322, (0 split)
+      hum       < 0.4360415 to the left,  agree=0.689, adj=0.153, (0 split)
+      windspeed < 0.272702  to the right, agree=0.665, adj=0.085, (0 split)
+
+Node number 30: 59 observations
+  mean=6200.661, MSE=833435.3 
+
+Node number 31: 102 observations
+  mean=7021.294, MSE=678837 
+

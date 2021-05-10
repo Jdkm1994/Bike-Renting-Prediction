@@ -1,0 +1,51 @@
+
+Call:
+lm(formula = cnt ~ ., data = dummy_df_train)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3834.4  -325.8   101.6   449.5  2221.9 
+
+Coefficients: (6 not defined because of singularities)
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   4214.36     462.18   9.119  < 2e-16 ***
+season.1     -1669.52     216.11  -7.725 5.24e-14 ***
+season.2      -740.60     243.76  -3.038 0.002491 ** 
+season.3      -747.30     216.89  -3.445 0.000613 ***
+season.4           NA         NA      NA       NA    
+yr.0         -2029.37      65.60 -30.935  < 2e-16 ***
+yr.1               NA         NA      NA       NA    
+mnth.1         147.88     221.31   0.668 0.504262    
+mnth.2         305.73     219.17   1.395 0.163583    
+mnth.3         606.80     221.51   2.739 0.006352 ** 
+mnth.4         522.25     279.28   1.870 0.062012 .  
+mnth.5         774.45     298.89   2.591 0.009818 ** 
+mnth.6         567.16     300.54   1.887 0.059666 .  
+mnth.7          88.66     318.01   0.279 0.780512    
+mnth.8         480.38     301.24   1.595 0.111358    
+mnth.9         953.49     247.56   3.851 0.000131 ***
+mnth.10        532.62     183.74   2.899 0.003894 ** 
+mnth.11        -70.68     178.27  -0.396 0.691896    
+mnth.12            NA         NA      NA       NA    
+weekday.0     -306.85     120.04  -2.556 0.010846 *  
+weekday.1     -896.62     202.59  -4.426 1.16e-05 ***
+weekday.2     -803.53     225.90  -3.557 0.000407 ***
+weekday.3     -674.71     226.03  -2.985 0.002960 ** 
+weekday.4     -726.80     223.83  -3.247 0.001236 ** 
+weekday.5     -686.29     223.38  -3.072 0.002228 ** 
+weekday.6          NA         NA      NA       NA    
+workingday.0  -694.76     193.33  -3.594 0.000355 ***
+workingday.1       NA         NA      NA       NA    
+weathersit.1  2042.13     242.16   8.433 2.91e-16 ***
+weathersit.2  1551.83     224.80   6.903 1.39e-11 ***
+weathersit.3       NA         NA      NA       NA    
+temp          4453.60     463.13   9.616  < 2e-16 ***
+hum          -1656.88     347.53  -4.768 2.38e-06 ***
+windspeed    -2883.77     500.93  -5.757 1.42e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 777.3 on 556 degrees of freedom
+Multiple R-squared:  0.8438,	Adjusted R-squared:  0.8362 
+F-statistic: 111.2 on 27 and 556 DF,  p-value: < 2.2e-16
+
