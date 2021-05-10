@@ -2,8 +2,6 @@
 
 Project Name - Bike Renting
 
-Deadline - 15 Days
-
 Data Set -
 1) day.csv
 Problem statement -
